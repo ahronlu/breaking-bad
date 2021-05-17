@@ -12,7 +12,7 @@ export default function Home () {
   useEffect(() => {
     const fetchItems = async () => {
       const result = await axios(
-        `https://www.breakingbadapi.com/api/characters?name=${query}`
+        `https://www.breakingbadapi.com/api/characters?name=${query.toLocaleLowerCase()}`
       )
 
       setNewItems(result.data)
